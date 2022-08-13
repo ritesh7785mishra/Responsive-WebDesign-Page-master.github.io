@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ-Splash_page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="col1">
+            <div class="column">
+                <div class="column1">
+                    <h1>Learn how to make <strong>the best BBQ ribs</strong> in town</h1>
+                    <p>Join us for this live webinar</p>
+                    <p class="small">Mouthwateringly delicious</p>
+                </div>
+            </div>
+        </div>
+        <div id="col2" class="col2">
+            <div class="column column2">
+                <h2>Become a BBQ master!</h2>
+                <p>REGISTER TODAY</p>
+                <p>BBQ isn't just standing in front of your grill with it on full blast and hoping for the best. It's an art! One way to speed up the process is to learn from the best. You can do just that by signing up for this free webinar!</p>
+                <form id="email-collector" action="#" method="" class="form">
+                    <label for="fname"></label>
+                        <input name="name" type="text" id="fname" placeholder="Enter Your Name" >
+                    
+                    <label for="email"></label>     
+                        <input name="email" type="email" id="email" placeholder="Enter Your Email" required>
+                
+                    <button type="submit" id="submit" class="btn">Submit</button>
+                
+                </form>  
+                <p class="fine-print">We'll never share your information your permission</p>
+            </div>
+        </div>
+    </div> <!--closing container-->
+    <script>
+        let emailCollector = document.getElementById("email-collector")
+        emailCollector.addEventListener("submit", event => {
+            event.preventDefault()
+           let ourFormData = new FormData(event.target)
+            let name = ourFormData.get("name")
+            let email = ourFormData.get("email")
+            let updatedHtmlContent = `
+                    <h2>Congratulations, ${name}!</h2>
+
+                    <p>You're on your way to becoming a BBQ Master!</p>
+
+                    <p class="fine-print">You will get weekly BBQ tips sent to: ${email}</p>
+                    
+                    <p class="fine-print">We'll never share your information without your permission</p>
+                `
+            let mainContent = document.getElementById("col2")
+            mainContent.innerHTML = updatedHtmlContent
+        })
+    </script>
+</body>
+</html>

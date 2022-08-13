@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #404040;
+}
+.container{
+    margin: 0;
+}
+.column{
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 50vh;
+}
+.column1{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 60vh;
+    max-width: 300px;
+}
+.column2{
+    padding-top: 35px;
+}
+/* typography */
+h1{
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin:0;
+}
+h2{
+    margin:0;
+    font-size: 1.3125rem;
+}
+.small{
+    box-sizing: border-box;
+    font-size: 0.625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-top: 5px solid #F18119;
+    margin: 0;
+    padding-top: 2px;
+    width: fit-content;
+    align-self: center;
+    border-image:linear-gradient(270deg ,#FF713B, #FFA51D) 1 ;
+}
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+h1 + p {
+    color: #F18119;
+    font-weight: 900;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+h2 + p {
+    color: #F18119;
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+input{
+    margin: .5em;
+}
+.form{
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    
+}
+input, .btn{
+    width: 100%;
+    font-family: inherit;
+    text-align: inherit; 
+    padding: .5em;
+    border-radius: 5px;
+    border: #404040 1px solid;
+
+}
+.col1 .small{
+    order: -1;
+    color: #F18119;
+}
+.btn{
+    margin: 6.66667px;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    padding: 1em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(270deg ,#FF713B, #FFA51D);
+    color: white;
+    transform: scale(1);
+    transition: all 250ms;
+}
+.btn:hover,
+.btn:focus{
+    color: black;
+    transform: scale(1.1);
+}
+input{
+    transform: scale(1);
+    transition: all 250ms;
+}
+input:focus{
+    transform: scale(1.1);
+}
+.col1{
+    color: white;
+    padding: 0 .5em 2em;
+    min-height: 400px;
+    background-color: #404040;
+    background-image: url("https://media.gettyimages.com/photos/flame-grilled-steaks-being-flipped-on-barbecue-with-tongs-picture-id1143503855?b=1&k=20&m=1143503855&s=170667a&w=0&h=kCi1YEK6K8q3zhmnGtibpqwhMXsCnCkup84JumQKR7I=");
+    background-blend-mode: multiply;
+    background-position: center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+.col2{
+    margin: 1rem;
+}
+
+/* =========
+  media queries
+  =========== */
+  @media (min-width:500px){
+    
+    body {
+        font-size: 1.125rem;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2,
+    h1 + p {
+        font-size: 1.75rem;
+    }
+
+      .container{
+    
+          display: flex;
+          flex-direction: row;
+      }
+    
+      .col1{
+          width: 60%;
+      }
+      .col2{
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          
+      }
+      .col1, .col2{
+          min-height: 100vh; ;
+      }
+    
+      .column1{
+          height: 100vh;
+          max-width: 475px;
+      }
+  }
